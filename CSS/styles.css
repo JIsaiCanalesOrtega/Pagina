@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Barra de menú */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #0A192F, #1C2B3A); /* Fondo degradado elegante */
+    color: white;
+    padding: 25px 40px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más definida */
+    margin-bottom: 5px;
+}
+
+.menu img {
+    height: 65px;
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 0.05); /* Resalta el logo si es PNG transparente */
+    padding: 10px;
+    border-radius: 12px;
+    filter: brightness(0) invert(1); /* Si tu logo es oscuro, esto lo aclara */
+    transition: transform 0.3s ease;
+}
+
+.menu img:hover {
+    transform: scale(1.05); /* Sutil animación al pasar el mouse */
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* ✅ Altura mínima, no fija */
+    font-family: 'Orbitron';
+    transition: background-image 0.5s ease-in-out;
+}
+
+
+body h2 {
+    color: white;
+}
+
+.rect {
+    flex: 0.7;
+    width: 60%;
+    margin-left: 5%;
+    background-image: url('../Imagenes/planos.webp');
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+}
+
+.rect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Color oscuro con opacidad */
+    z-index: 1; /* Capa oscura debajo */
+}
+
+.rect h2 {
+    color: white; /* Asegura que el texto sea blanco */
+    z-index: 2; /* Coloca el texto por encima de la capa oscura */
+}
+
+.rect2 {
+    width: 60%;
+    flex: 0.7;
+    margin-left: 35%;
+    background-image: url('../Imagenes/sobremi.webp');
+    background-size: cover; 
+    background-position: center; 
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+}
+
+.rect2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1; /* Capa oscura debajo */
+}
+
+.rect2 h2 {
+    color: white; /* Asegura que el texto sea blanco */
+    z-index: 2; /* Coloca el texto por encima de la capa oscura */
+}
+
+.rect3 {
+    width: 60%;
+    flex: 0.7;
+    margin-left: 5%;
+    background-image: url('../Imagenes/Servicios.webp');
+    background-size: cover; 
+    background-position: bottom; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+}
+
+.rect3::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1; /* Capa oscura debajo */
+}
+
+.rect3 h2 {
+    color: white; /* Asegura que el texto sea blanco */
+    z-index: 2; /* Coloca el texto por encima de la capa oscura */
+}
+/* Efecto al pasar el mouse (hover) */
+.rect:hover, .rect2:hover, .rect3:hover {
+    transform: scale(1.05); /* Le da un pequeño efecto de aumento */
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurece un poco más el fondo al pasar el ratón */
+}
+.rect, .rect2, .rect3 {
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Agrega transiciones suaves */
+}
+
+.rect.transparent, .rect2.transparent, .rect3.transparent {
+    opacity: 0.2; /* Reduce la opacidad de los otros divs */
+    transform: scale(0.95); /* Reduce ligeramente el tamaño de los divs */
+}
+
+.rect h2, .rect2 h2, .rect3 h2 {
+    z-index: 2; /* Asegura que el texto esté por encima de los fondos oscuros */
+}
+
+.rect::after, .rect2::after, .rect3::after {
+    background: rgba(0, 0, 0, 0.6); /* Ajusta la opacidad del fondo oscuro */
+}
+.footer {
+    background-color: #0A192F;
+    color: #EAEAEA;
+    text-align: center;
+    padding: 10px 5px; /* ⬅️ Menos espacio vertical y horizontal */
+    margin-top:5px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.footer h3 {
+    margin-bottom: 10px; /* ⬅️ Menos espacio debajo del texto */
+    font-size: 18px; /* ⬅️ Texto más pequeño */
+}
+
+.social-icons a {
+    margin: 0 6px; /* ⬅️ Menos espacio entre íconos */
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img {
+    width: 24px;  /* ⬅️ Íconos más pequeños */
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* ⬅️ Efecto más sutil */
+}
+
+
+@media (max-width: 1024px) {
+    .rect, .rect2, .rect3 {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu img {
+        margin-bottom: 10px;
+    }
+
+    .rect, .rect2, .rect3 {
+        width: 90%;
+        margin-left: 5%;
+        flex: none;
+    }
+
+    .rect h2, .rect2 h2, .rect3 h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .footer h3 {
+        font-size: 20px;
+    }
+
+    .social-icons img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rect h2, .rect2 h2, .rect3 h2 {
+        font-size: 1.2rem;
+    }
+
+    .footer {
+        padding: 15px 10px;
+    }
+
+    .social-icons a {
+        margin: 0 5px;
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
+}

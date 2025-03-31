@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Evidencias</title>
+    <link rel="stylesheet" href="CSS/styles4.css">
+    <link rel="stylesheet" href="CSS/layout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="menu">
+        <img src='../Pagina Arquitecta/Imagenes/logo.png' alt="Logo">
+        <h1>SAVE</h1>
+    </div>
+    
+    <div class="container">
+
+        <!-- Fila con Proyectos -->
+        <h2 id="Planos">Planos</h2>
+        <div class="row" >
+            <!-- Proyecto 1 -->
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/Planos.png" alt="Proyecto 1" class="project-image" onclick="showDetails(1)">
+                <span class="tooltip">Descripción breve del Proyecto 1</span>
+            </div>
+            <!-- Proyecto 2 -->
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/Planos.png" alt="Proyecto 2" class="project-image" onclick="showDetails(2)">
+                <span class="tooltip">Descripción breve del Proyecto 2</span>
+            </div>
+            <!-- Proyecto 3 -->
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/Planos.png" alt="Proyecto 3" class="project-image" onclick="showDetails(3)">
+                <span class="tooltip">Descripción breve del Proyecto 3</span>
+            </div>
+            <!-- Proyecto 4 -->
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/Planos.png" alt="Proyecto 4" class="project-image" onclick="showDetails(4)">
+                <span class="tooltip">Descripción breve del Proyecto 4</span>
+            </div>
+        </div>
+
+        <!-- Repite esta estructura para las siguientes filas -->
+         <h2 id="Permisos">Permisos</h2>
+        <div class="row" >
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/Permisos.png" alt="Proyecto 5" class="project-image" onclick="showDetails(5)">
+                <span class="tooltip">Descripción breve del Proyecto 5</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/Permisos.png" alt="Proyecto 6" class="project-image" onclick="showDetails(6)">
+                <span class="tooltip">Descripción breve del Proyecto 6</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/Permisos.png" alt="Proyecto 7" class="project-image" onclick="showDetails(7)">
+                <span class="tooltip">Descripción breve del Proyecto 7</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/Permisos.png" alt="Proyecto 8" class="project-image" onclick="showDetails(8)">
+                <span class="tooltip">Descripción breve del Proyecto 8</span>
+            </div>
+        </div>
+        <h2 id="Proyecto">Proyectos</h2>
+        <div class="row">
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 5" class="project-image" onclick="showDetails(5)">
+                <span class="tooltip">Descripción breve del Proyecto 5</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 6" class="project-image" onclick="showDetails(6)">
+                <span class="tooltip">Descripción breve del Proyecto 6</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 7" class="project-image" onclick="showDetails(7)">
+                <span class="tooltip">Descripción breve del Proyecto 7</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 8" class="project-image" onclick="showDetails(8)">
+                <span class="tooltip">Descripción breve del Proyecto 8</span>
+            </div>
+        </div>
+
+        <h2 id="Supervisión">Supervisión</h2>
+        <div class="row" >
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 5" class="project-image" onclick="showDetails(5)">
+                <span class="tooltip">Descripción breve del Proyecto 5</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 6" class="project-image" onclick="showDetails(6)">
+                <span class="tooltip">Descripción breve del Proyecto 6</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 7" class="project-image" onclick="showDetails(7)">
+                <span class="tooltip">Descripción breve del Proyecto 7</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 8" class="project-image" onclick="showDetails(8)">
+                <span class="tooltip">Descripción breve del Proyecto 8</span>
+            </div>
+        </div>
+
+        <h2 id="Construcción">Construcción</h2>
+        <div class="row">
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 5" class="project-image" onclick="showDetails(5)">
+                <span class="tooltip">Descripción breve del Proyecto 5</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 6" class="project-image" onclick="showDetails(6)">
+                <span class="tooltip">Descripción breve del Proyecto 6</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 7" class="project-image" onclick="showDetails(7)">
+                <span class="tooltip">Descripción breve del Proyecto 7</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 8" class="project-image" onclick="showDetails(8)">
+                <span class="tooltip">Descripción breve del Proyecto 8</span>
+            </div>
+        </div>
+
+        <h2 id="Firma">Firma</h2>
+        <div class="row" >
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 5" class="project-image" onclick="showDetails(5)">
+                <span class="tooltip">Descripción breve del Proyecto 5</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 6" class="project-image" onclick="showDetails(6)">
+                <span class="tooltip">Descripción breve del Proyecto 6</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 7" class="project-image" onclick="showDetails(7)">
+                <span class="tooltip">Descripción breve del Proyecto 7</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 8" class="project-image" onclick="showDetails(8)">
+                <span class="tooltip">Descripción breve del Proyecto 8</span>
+            </div>
+        </div>
+
+        <h2 id="Avalúos">Avalúos</h2>
+        <div class="row" >
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 5" class="project-image" onclick="showDetails(5)">
+                <span class="tooltip">Descripción breve del Proyecto 5</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 6" class="project-image" onclick="showDetails(6)">
+                <span class="tooltip">Descripción breve del Proyecto 6</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 7" class="project-image" onclick="showDetails(7)">
+                <span class="tooltip">Descripción breve del Proyecto 7</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 8" class="project-image" onclick="showDetails(8)">
+                <span class="tooltip">Descripción breve del Proyecto 8</span>
+            </div>
+        </div>
+
+        <h2 id="Renders">Renders</h2>
+        <div class="row" >
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 5" class="project-image" onclick="showDetails(5)">
+                <span class="tooltip">Descripción breve del Proyecto 5</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 6" class="project-image" onclick="showDetails(6)">
+                <span class="tooltip">Descripción breve del Proyecto 6</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 7" class="project-image" onclick="showDetails(7)">
+                <span class="tooltip">Descripción breve del Proyecto 7</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 8" class="project-image" onclick="showDetails(8)">
+                <span class="tooltip">Descripción breve del Proyecto 8</span>
+            </div>
+        </div>
+
+        <h2 id="Topografía">Topografía</h2>
+        <div class="row" >
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 5" class="project-image" onclick="showDetails(5)">
+                <span class="tooltip">Descripción breve del Proyecto 5</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 6" class="project-image" onclick="showDetails(6)">
+                <span class="tooltip">Descripción breve del Proyecto 6</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 7" class="project-image" onclick="showDetails(7)">
+                <span class="tooltip">Descripción breve del Proyecto 7</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 8" class="project-image" onclick="showDetails(8)">
+                <span class="tooltip">Descripción breve del Proyecto 8</span>
+            </div>
+        </div>
+        <h2 id="Inmobiliaria">Inmobiliaria</h2>
+        <div class="row">
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 5" class="project-image" onclick="showDetails(5)">
+                <span class="tooltip">Descripción breve del Proyecto 5</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 6" class="project-image" onclick="showDetails(6)">
+                <span class="tooltip">Descripción breve del Proyecto 6</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 7" class="project-image" onclick="showDetails(7)">
+                <span class="tooltip">Descripción breve del Proyecto 7</span>
+            </div>
+            <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+                <img src="Imagenes/hero.webp" alt="Proyecto 8" class="project-image" onclick="showDetails(8)">
+                <span class="tooltip">Descripción breve del Proyecto 8</span>
+            </div>
+        </div>
+
+
+        <!-- Agregar filas adicionales según sea necesario -->
+
+    </div>
+<!-- Modal para mostrar imagen ampliada y sus imágenes relacionadas -->
+<div class="modal" id="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <!-- Imagen principal que aparecerá en el modal -->
+        <img id="modal-image" src="" alt="Imagen Proyecto">
+        
+        <!-- Imágenes relacionadas aparecerán aquí -->
+        <div class="related-images" id="related-images">
+        </div>
+    </div>
+</div>
+
+
+    <script src="js/script2.js"></script>
+    <footer class="footer">
+        <h3>Contáctanos</h3>
+        <div class="social-icons">
+            <a href="https://wa.me/1234567890" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/whatsapp.png" alt="WhatsApp">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/facebook-new.png" alt="Facebook">
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="mailto:tuemail@gmail.com">
+                <img src="https://img.icons8.com/ios-filled/50/gmail.png" alt="Gmail">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

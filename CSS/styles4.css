@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: 'Orbitron', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* h2 normales en gris elegante */
+.container h2 {
+    color: #2e2e2e;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    margin: 40px 0 20px;
+    text-align: center;
+}
+
+/* Título del menú blanco */
+.menu h2 {
+    color: #ffffff;
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    align-self: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.project-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.image-container:hover .tooltip {
+    opacity: 1;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    position: relative;
+    margin: 5% auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.modal img {
+    width: 100%;
+    height: auto;
+}
+
+.related-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.related-images img {
+    width: 100px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.related-images img:hover {
+    border: 2px solid #00b4d8;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #0A192F;
+    color: #EAEAEA;
+    text-align: center;
+    padding: 10px 5px;
+    margin-top: auto;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.social-icons a {
+    margin: 0 6px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* MENÚ */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background: linear-gradient(to right, #0A192F, #1C2B3A);
+    color: white;
+    padding: 20px 40px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-family: 'Orbitron', sans-serif;
+    gap: 20px;
+}
+
+.menu img {
+    height: 65px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 12px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.menu img:hover {
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    .row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu h2 {
+        font-size: 28px;
+        margin-top: 10px;
+    }
+}

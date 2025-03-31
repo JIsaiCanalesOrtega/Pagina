@@ -1,0 +1,142 @@
+/* Estilos generales */
+body {
+    font-family: 'Orbitron', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Para que el overlay esté en una capa inferior */
+}
+
+/* Fondo difuminado */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Imagenes/fondoServicios.jpeg'); /* Ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(5px); /* Aplica el desenfoque */
+    -webkit-filter: blur(5px); /* Para compatibilidad con Safari */
+    z-index: -1; /* Asegura que esté detrás del contenido */
+}
+
+
+/* Estilos de la lista */
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+    grid-gap: 15px; /* Espaciado entre los elementos */
+    list-style: none;
+    padding: 0;
+    margin: 50px auto; /* Centra la lista en la pantalla */
+    width: 70%; /* Ancho de la lista */
+}
+
+/* Estilos de los elementos de la lista */
+li {
+    background-color: #B85C38; /* Color de fondo como ladrillo */
+    border: 2px solid #7A3A2A; /* Bordes de ladrillo */
+    border-radius: 8px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 22px; /* Hacer los elementos más grandes */
+    padding: 15px; /* Más espacio dentro de cada elemento */
+    text-align: center; /* Centrado del texto dentro de cada elemento */
+    text-decoration: none; /* Elimina cualquier subrayado */
+}
+
+li:hover {
+    transform: scale(1.1); /* Aumentar más el tamaño al pasar el ratón */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra más fuerte al hacer hover */
+    text-decoration: none; /* Elimina el subrayado al hacer hover */
+}
+
+/* Estilos de los enlaces */
+li a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: white; /* Mantén el color blanco de los enlaces */
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: block; /* Aseguramos que el enlace ocupe todo el espacio del li */
+    transition: 0.3s;
+}
+
+li a:hover {
+    background-color: transparent; /* Elimina el cambio de color de fondo al pasar el ratón */
+    color: white; /* Mantiene el color blanco en todo momento */
+    text-decoration: none; /* Elimina el subrayado al hacer hover */
+}
+
+/* Asegura que el último elemento de la última fila se centra */
+ul li:nth-last-child(1) {
+    grid-column: span 3; /* El último elemento ocupa las 3 columnas */
+    justify-self: center; /* Centra el elemento en la fila */
+}
+
+/* Tooltip */
+.tooltip .tooltip-text {
+    visibility: hidden;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+/* Flecha del tooltip */
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+.footer {
+    background-color: #0A192F;
+    color: #EAEAEA;
+    text-align: center;
+    padding: 10px 5px; /* ⬅️ Menos espacio vertical y horizontal */
+    margin-top: auto;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.footer h3 {
+    margin-bottom: 10px; /* ⬅️ Menos espacio debajo del texto */
+    font-size: 18px; /* ⬅️ Texto más pequeño */
+}
+
+.social-icons a {
+    margin: 0 6px; /* ⬅️ Menos espacio entre íconos */
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img {
+    width: 24px;  /* ⬅️ Íconos más pequeños */
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* ⬅️ Efecto más sutil */
+}
