@@ -1,6 +1,6 @@
 /* Estilos generales */
 body {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Orbitron';
     color: #333;
     margin: 0;
     padding: 0;
@@ -140,3 +140,5 @@ ul li:nth-last-child(1) {
 .social-icons a:hover {
     transform: scale(1.1); /* ⬅️ Efecto más sutil */
 }
+
+

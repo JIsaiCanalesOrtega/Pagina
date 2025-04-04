@@ -9,7 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
 
 body {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Orbitron';
     background-color: #f4f4f4;
     color: #EAEAEA;
     display: flex;
@@ -22,30 +22,32 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, #0A192F, #1C2B3A);
+    background: linear-gradient(to right, #0A192F, #1C2B3A); /* Fondo degradado elegante */
     color: white;
     padding: 25px 40px;
     width: 100%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más definida */
+    margin-bottom: 5px;
 }
 
 .menu img {
     height: 65px;
     margin-right: 20px;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.05); /* Resalta el logo si es PNG transparente */
     padding: 10px;
     border-radius: 12px;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1); /* Si tu logo es oscuro, esto lo aclara */
     transition: transform 0.3s ease;
 }
 
 .menu img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Sutil animación al pasar el mouse */
 }
+
 
 /* --- TEXTO GENERAL --- */
 h1, h2, h3 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Orbitron';
     color: white;
     text-align: center;
 }
