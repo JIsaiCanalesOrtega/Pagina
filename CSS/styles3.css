@@ -24,13 +24,15 @@ body {
 /* Estilos de la lista */
 ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
-    grid-gap: 15px; /* Espaciado entre los elementos */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* se adapta automáticamente */
+    gap: 15px;
     list-style: none;
     padding: 0;
-    margin: 50px auto; /* Centra la lista en la pantalla */
-    width: 70%; /* Ancho de la lista */
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1000px;
 }
+
 
 /* Estilos de los elementos de la lista */
 li {
@@ -66,12 +68,6 @@ li a:hover {
     background-color: transparent; /* Elimina el cambio de color de fondo al pasar el ratón */
     color: white; /* Mantiene el color blanco en todo momento */
     text-decoration: none; /* Elimina el subrayado al hacer hover */
-}
-
-/* Asegura que el último elemento de la última fila se centra */
-ul li:nth-last-child(1) {
-    grid-column: span 3; /* El último elemento ocupa las 3 columnas */
-    justify-self: center; /* Centra el elemento en la fila */
 }
 
 /* Tooltip */
@@ -136,6 +132,119 @@ ul li:nth-last-child(1) {
 
 .social-icons a:hover {
     transform: scale(1.1); /* ⬅️ Efecto más sutil */
+}
+
+
+
+/* RESPONSIVO - Ajustes de columnas de la lista */
+@media (max-width: 1024px) {
+    ul {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas para tablets o pantallas medianas */
+      width: 85%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    ul {
+      grid-template-columns: 1fr; /* 1 columna en móviles */
+      width: 90%;
+    }
+  
+    li {
+      font-size: 18px;
+      padding: 12px;
+    }
+  
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer h3 {
+      font-size: 16px;
+    }
+  
+    .social-icons a {
+      margin: 0 8px;
+    }
+  
+    .social-icons img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    li {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .tooltip .tooltip-text {
+      font-size: 12px;
+    }
+  
+    .footer h3 {
+      font-size: 14px;
+    }
+  
+    .footer {
+      padding: 8px;
+    }
+  
+    .social-icons img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    li {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer h3 {
+        font-size: 16px;
+    }
+
+    .social-icons a {
+        margin: 0 8px;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    li {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .tooltip .tooltip-text {
+        font-size: 12px;
+    }
+
+    .footer h3 {
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 8px;
+    }
+
+    .social-icons img {
+        width: 18px;
+        height: 18px;
+    }
 }
 
 

@@ -180,15 +180,6 @@ body h2 {
 .social-icons a:hover {
     transform: scale(1.1); /* ⬅️ Efecto más sutil */
 }
-
-
-@media (max-width: 1024px) {
-    .rect, .rect2, .rect3 {
-        width: 80%;
-        margin-left: 10%;
-    }
-}
-
 @media (max-width: 768px) {
     .menu {
         flex-direction: column;
@@ -199,10 +190,16 @@ body h2 {
         margin-bottom: 10px;
     }
 
+    /* Modificación en las rect para la versión móvil */
     .rect, .rect2, .rect3 {
-        width: 90%;
-        margin-left: 5%;
-        flex: none;
+        width: 90%; /* Ajuste el ancho para aprovechar mejor el espacio en móviles */
+        margin-left: 5%; /* Mantiene margen equilibrado */
+        flex: 1; /* Permite que los recuadros crezcan */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px; /* Añadido espacio entre los divs */
+        height: calc(100vh / 3); /* Distribuye la altura de la pantalla equitativamente */
     }
 
     .rect h2, .rect2 h2, .rect3 h2 {
@@ -221,6 +218,10 @@ body h2 {
 }
 
 @media (max-width: 480px) {
+    .rect, .rect2, .rect3 {
+        height: calc(100vh / 3); /* Asegura que ocupen más espacio en pantallas más pequeñas */
+    }
+
     .rect h2, .rect2 h2, .rect3 h2 {
         font-size: 1.2rem;
     }
